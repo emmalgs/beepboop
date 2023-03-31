@@ -47,9 +47,13 @@ function displayBeepBoop(input) {
   const outputText = document.getElementById("output-text");
   const output = beepBooper(input);
   outputParagraph.innerText = output.join(", ");
-  outputText.append(outputParagraph)
-  const outputDisplay = document.getElementById("output-container")
-  outputDisplay.removeAttribute("class", "hidden")
+  outputText.append(outputParagraph);
+
+  const outputDisplay = document.getElementById("output-container");
+  outputDisplay.removeAttribute("class", "hidden");
+
+  const formDisplay = document.querySelector("#machine");
+  formDisplay.setAttribute("class", "hidden")
 
   const resetButton = document.getElementById("reset");
   resetButton.addEventListener("click", reset);
@@ -61,6 +65,9 @@ function reset() {
 
   const text = document.getElementById("text");
   text.remove();
+
+  const formDisplay = document.querySelector("#machine");
+  formDisplay.removeAttribute("class", "hidden")
 }
 
 window.addEventListener("load", function() {
