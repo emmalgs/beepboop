@@ -36,12 +36,26 @@ function inputChecker(userInput) {
 
 function getUserInput(e) {
   e.preventDefault();
-  const outputParagraph = document.createElement("p");
-  const outputDisplay = document.getElementById("output-container");
   const input = document.getElementById("input").value;
+  displayBeepBoop(input);
+}
+
+function displayBeepBoop(input) {
+  const outputParagraph = document.createElement("p");
+  const outputText = document.getElementById("output-text");
   const output = beepBooper(input);
   outputParagraph.innerText = output.join(", ");
-  outputDisplay.append(outputParagraph)
+  outputText.append(outputParagraph)
+  const outputDisplay = document.getElementById("output-container")
+  outputDisplay.removeAttribute("class", "hidden")
+
+  const resetButton = document.getElementById("reset");
+  resetButton.addEventListener("click", reset);
+}
+
+function reset() {
+  const outputDisplay = document.getElementById("output-container")
+  outputDisplay.setAttribute("class", "hidden")
 }
 
 window.addEventListener("load", function() {
