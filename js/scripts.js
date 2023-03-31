@@ -41,7 +41,9 @@ function getUserInput(e) {
 }
 
 function displayBeepBoop(input) {
-  const outputParagraph = document.createElement("p");
+  const outputParagraph = document.createElement("div");
+  outputParagraph.setAttribute("id", "text")
+
   const outputText = document.getElementById("output-text");
   const output = beepBooper(input);
   outputParagraph.innerText = output.join(", ");
@@ -56,6 +58,9 @@ function displayBeepBoop(input) {
 function reset() {
   const outputDisplay = document.getElementById("output-container")
   outputDisplay.setAttribute("class", "hidden")
+
+  const text = document.getElementById("text");
+  text.remove();
 }
 
 window.addEventListener("load", function() {
