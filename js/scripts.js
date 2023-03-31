@@ -1,4 +1,3 @@
-
 // Business Logic
 
 function beepBooper(input) {
@@ -39,10 +38,9 @@ function getUserInput(e) {
   e.preventDefault();
   const outputParagraph = document.createElement("p");
   const outputDisplay = document.getElementById("output-container");
-
   const input = document.getElementById("input").value;
   const output = beepBooper(input);
-  outputParagraph.innerText = output;
+  outputParagraph.innerText = output.join(", ");
   outputDisplay.append(outputParagraph)
 }
 

@@ -52,3 +52,7 @@ Expected Output: "18";
 Test: "It should remove anything that is not a digit from the input"
 Code: inputChecker("slab of butter 25");
 Expected Output: "25";
+
+Test: "It should not let the user enter a number greater than 1000, because that's just too much"
+Code: inputChecker("19020983019");
+Expected Output: false;
