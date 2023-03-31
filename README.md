@@ -29,3 +29,10 @@ Expected Output: [0, "Beep!", "Boop!", "Won't you be my neightbor?", 4, 5, 6, 7,
 Test: "It should ignore any extra white space"
 Code: beepBooper("          15   ");
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neightbor?", 4, 5, 6, 7, 8, 9, "Beep!, "Beep!", "Boop!", "Won't you be my neighbor?", "Beep!", "Beep!"];
+
+
+Describe: inputChecker();
+
+Test: "It should return false if value is a string"
+Code: inputChecker("show me my beepbooper!");
+Expected Output: false;

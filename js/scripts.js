@@ -19,3 +19,8 @@ function beepBooper(input) {
   return beepedArray;
 }
 
+function inputChecker(userInput) {
+  if (!Number(userInput)) {
+    return false;
+  } else { return true; }
+}
