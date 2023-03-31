@@ -1,4 +1,8 @@
-function beepBooper(number) {
+
+// Business Logic
+
+function beepBooper(input) {
+  const number = Number(input.trim());
   const numberArray = [];
   for (let i = 0; i <= number; i++) {
     numberArray.push(i.toString());
@@ -14,3 +18,4 @@ function beepBooper(number) {
   })
   return beepedArray;
 }
+

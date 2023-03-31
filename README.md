@@ -25,3 +25,7 @@ Expected Output: [0, "Beep!", "Boop!", 3, 4, 5, 6, 7, 8, 9, "Beep!, "Beep!", "Bo
 Test: "It should replace numbers containing a 3 with "Won't you be my neightbor?" and return the updated array, following heirarchy rules"
 Code: beepBooper(13);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neightbor?", 4, 5, 6, 7, 8, 9, "Beep!, "Beep!", "Boop!", "Won't you be my neighbor?"];
+
+Test: "It should ignore any extra white space"
+Code: beepBooper("          15   ");
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neightbor?", 4, 5, 6, 7, 8, 9, "Beep!, "Beep!", "Boop!", "Won't you be my neighbor?", "Beep!", "Beep!"];
