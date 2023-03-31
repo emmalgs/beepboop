@@ -8,16 +8,34 @@ function beepBooper(input) {
       numberArray.push(i.toString());
     }
     const beepedArray = numberArray.map(function(num) {
-      if (num.includes(3)) {
-        return num = "Won't you be my neighbor?"
-      } else if (num.includes(2)) {
-        return num = "Boop!";
-      } else if (num.includes(1)) {
-        return num = "Beep!";
-      } else { return num; }
+      return beepTranslator(num)
     })
     return beepedArray;
   } else { return false; }
+}
+
+function beepTranslator(num) {
+  if (num.includes(3)) {
+    return num = "Won't you be my neighbor?"
+  } else if (num.includes(2)) {
+    return num = "Boop!";
+  } else if (num.includes(1)) {
+    return num = "Beep!";
+  } else if (num.includes(4)) {
+    return num = "Bop"
+  } else if (num.includes(5)) {
+    return num = "Boing"
+  } else if (num.includes(6)) {
+    return num = "Honk"
+  } else if (num.includes(7)) {
+    return num = "Bong"
+  } else if (num.includes(8)) {
+    return num = "Bing"
+  } else if (num.includes(9)) {
+    return num = "Bang"
+  } else if (num.includes(0)) {
+    return num = "Oh"
+  } else { return num; }
 }
 
 function inputChecker(userInput) {
@@ -46,7 +64,7 @@ function displayBeepBoop(input) {
 
   const outputText = document.getElementById("output-text");
   const output = beepBooper(input);
-  outputParagraph.innerText = output.join(", ");
+  outputParagraph.innerText = output.join(" ");
   outputText.append(outputParagraph);
 
   const outputDisplay = document.getElementById("output-container");
