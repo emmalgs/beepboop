@@ -71,6 +71,7 @@ function displayBeepBoop(input) {
   const output = beepBooper(input);
   outputParagraph.innerText = output.join(" ");
   outputText.append(outputParagraph);
+  typewriter(output)
 
   const outputDisplay = document.getElementById("output-container");
   outputDisplay.removeAttribute("class", "hidden");
@@ -87,7 +88,43 @@ function displayBeepBoop(input) {
     reverseReset();
     outputParagraph.innerText = reversedInput.join(" ");
     outputText.append(outputParagraph);
+
+
   })
+}
+
+function typewriter(input) {
+  const typerwriterDisplay = document.getElementById("typewriter");
+  let i = 0;
+  let j = 0;
+  let currentPhrase = [];
+  let isDeleting = false;
+
+  function type() {
+    typerwriterDisplay.innerHTML = currentPhrase.join("")
+    if (i < input.length) {
+      if (!isDeleting && j <= input[i].length) {
+        currentPhrase.push(input[i][j]);
+        j++
+      }
+      if (isDeleting && j <= input[i].length) {
+        j = 0;
+      }
+      if (j == input[i].length) {
+        isDeleting = true;
+      }
+      if (isDeleting && j === 0) {
+        currentPhrase = [];
+        isDeleting = false;
+        i++;
+        if (i == input.length) {
+          i = 0
+        }
+      }
+    }
+    setTimeout(type, 200);
+  }
+  type()
 }
 
 function reverseReset() {
