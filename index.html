@@ -14,12 +14,19 @@
     <div class="machine">
     <form>
       <label for="input">Enter a number to be Booped:</label>
-      <input type="text" name="input" id="input">
-      <button type="submit">Beep It!</button>
+      <div class="input-and-btn">
+        <input type="text" name="input" id="input" required>
+        <button type="submit">BEEP</button>
+      </div>
     </form>
     </div>
-    <div id="output-container"></div>
-    <img src="./images/castle.png" alt="Mr.Rogers castle drawing">
+    <div id="output-container" class="hidden">
+      <img src="./images/tiger.png" alt="Mr.Rogers tiger puppet">
+      <div id="output-text">
+        <button id="reset">&#10005</button>
+      </div>
+    </div>
   </div>
+    <img src="./images/castle.png" alt="Mr.Rogers castle drawing">
 </body>
 </html>
