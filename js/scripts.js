@@ -38,6 +38,11 @@ function beepTranslator(num) {
   } else { return num; }
 }
 
+function beepReverser(input) {
+  const reversed = input.reverse();
+  return reversed;
+}
+
 function inputChecker(userInput) {
   const digitsRegex = /\d/g;
   const inputCheck = userInput.trim();
@@ -75,6 +80,19 @@ function displayBeepBoop(input) {
 
   const resetButton = document.getElementById("reset");
   resetButton.addEventListener("click", reset);
+
+  const reverseButton = document.getElementById("reverse");
+  reverseButton.addEventListener("click", function(){
+    const reversedInput = beepReverser(output);
+    reverseReset();
+    outputParagraph.innerText = reversedInput.join(" ");
+    outputText.append(outputParagraph);
+  })
+}
+
+function reverseReset() {
+  const text = document.getElementById("text");
+  text.remove();
 }
 
 function reset() {
