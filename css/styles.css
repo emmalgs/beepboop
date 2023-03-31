@@ -110,7 +110,12 @@ img {
   height: 50vh;
 }
 
-#output-text button {
+#buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#output-text #reset {
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -123,7 +128,20 @@ img {
   align-self: flex-end;
 }
 
-#output-text button:hover {
+#output-text #reverse:hover,
+#output-text #reset:hover {
   background-color: var(--text-color);
   color: var(--highlight-color);
+}
+
+#output-text #reverse {
+  border-radius: 1em;
+  height: 50px;
+  text-align: center;
+  font-size: 1.4em;
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+  border-style: none;
+  margin: 1em;
+  align-self: flex-start;
 }
