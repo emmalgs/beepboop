@@ -36,3 +36,7 @@ Describe: inputChecker();
 Test: "It should return false if value is a string"
 Code: inputChecker("show me my beepbooper!");
 Expected Output: false;
+
+Test: "It should return false if value is empty"
+Code: inputChecker(" ");
+Expected Output: false;

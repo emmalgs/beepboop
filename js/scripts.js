@@ -20,7 +20,8 @@ function beepBooper(input) {
 }
 
 function inputChecker(userInput) {
-  if (!Number(userInput)) {
+  const inputCheck = userInput.trim()
+  if (!Number(inputCheck)) {
     return false;
-  } else { return true; }
+  } else { return inputCheck; }
 }
