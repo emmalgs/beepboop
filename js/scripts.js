@@ -21,8 +21,10 @@ function beepBooper(input) {
 
 function inputChecker(userInput) {
   const digitsRegex = /\d/g;
-  const inputCheck = userInput.trim().match(digitsRegex).join("");
-  if (!Number(inputCheck)) {
+  const inputCheck = userInput.trim();
+  if (digitsRegex.test(inputCheck)) {
+    return inputCheck.match(digitsRegex).join("")
+  } else if (!Number(inputCheck)) {
     return false;
   } else { return inputCheck; }
 }

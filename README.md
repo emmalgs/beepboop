@@ -48,3 +48,7 @@ Expected Output: "18";
 Test: "It should remove any punctuation from input value"
 Code: inputChecker("   !18,.'\   ");
 Expected Output: "18";
+
+Test: "It should remove anything that is not a digit from the input"
+Code: inputChecker("slab of butter 25");
+Expected Output: "25";
