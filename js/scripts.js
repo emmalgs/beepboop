@@ -68,6 +68,9 @@ function reset() {
 
   const formDisplay = document.querySelector("#machine");
   formDisplay.removeAttribute("class", "hidden")
+
+  const input = document.getElementById("input")
+  input.value = ''
 }
 
 window.addEventListener("load", function() {
