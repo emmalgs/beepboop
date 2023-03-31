@@ -15,6 +15,10 @@ body {
   background-color: var(--main-light-color);
 }
 
+.container {
+  background-image: url("./images/castle.png");
+}
+
 h1 {
   font-family: Righteous, Times, serif;
   font-size: 6em;
