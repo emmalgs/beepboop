@@ -20,3 +20,37 @@ h1 {
   font-size: 6em;
   color: var(--main-dark-color)
 }
+
+.machine {
+  width: 50vw;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  background-color: var(--highlight-color);
+}
+
+label {
+  font-size: 2em;
+  font-family: Righteous, Times, serif;
+  color: var(--text-color);
+  align-self: center;
+  margin: .7em;
+}
+
+input[type="text"],
+button[type="submit"] {
+  width: 90px;
+  height: 50px;
+  font-size: 2em;
+  font-family: Righteous, Times, serif;
+  margin: .7em;
+  align-self: center;
+}
+
+button[type="submit"] {
+  font-size: 1em;
+}
