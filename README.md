@@ -1,4 +1,4 @@
-TDD
+### TDD
 
 Describe: beepBooper();
 
@@ -40,3 +40,7 @@ Expected Output: false;
 Test: "It should return false if value is empty"
 Code: inputChecker(" ");
 Expected Output: false;
+
+Test: "It should return the trimmed input value as a string"
+Code: inputChecker("   18   ");
+Expected Output: "18";
