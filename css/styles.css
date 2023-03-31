@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Josefin+Sans:ital,wght@0,300;0,700;1,300&family=Montserrat:ital,wght@0,400;0,700;1,200&family=Oi&family=Righteous&family=Unbounded:wght@300;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Josefin+Sans:ital,wght@0,300;0,700;1,300&family=Montserrat:ital,wght@0,400;0,700;1,200&family=Oi&family=PT+Mono&family=Righteous&family=Unbounded:wght@300;800&display=swap');
 
 :root {
   --main-light-color: #ddd6fe;
@@ -101,10 +101,11 @@ img {
   left: 5vw;
   border-radius: 20px;
   box-shadow: 2px 2px 10px black;
+  
 }
 
 #text {
-  font-family: Montserrat, sans-serif;
+  font-family: PT Mono, sans-serif;
   padding-left: 1em;
   overflow-y: scroll;
   height: 50vh;
@@ -113,6 +114,8 @@ img {
 #buttons {
   display: flex;
   justify-content: space-between;
+  height: 25%;
+  
 }
 
 #output-text #reset {
@@ -125,7 +128,6 @@ img {
   color: var(--text-color);
   border-style: none;
   margin: 1em;
-  align-self: flex-end;
 }
 
 #output-text #reverse:hover,
@@ -144,4 +146,13 @@ img {
   border-style: none;
   margin: 1em;
   align-self: flex-start;
+  font-family: Righteous, sans-serif;
+  text-transform: uppercase;
+}
+
+#typewriter {
+  width: 30%;
+  font-family: PT Mono, sans-serif;
+  color: var(--main-dark-color);
+  align-self: center;
 }
