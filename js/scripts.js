@@ -20,7 +20,8 @@ function beepBooper(input) {
 }
 
 function inputChecker(userInput) {
-  const inputCheck = userInput.trim()
+  const digitsRegex = /\d/g;
+  const inputCheck = userInput.trim().match(digitsRegex).join("");
   if (!Number(inputCheck)) {
     return false;
   } else { return inputCheck; }

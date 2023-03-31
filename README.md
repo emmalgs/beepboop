@@ -44,3 +44,7 @@ Expected Output: false;
 Test: "It should return the trimmed input value as a string"
 Code: inputChecker("   18   ");
 Expected Output: "18";
+
+Test: "It should remove any punctuation from input value"
+Code: inputChecker("   !18,.'\   ");
+Expected Output: "18";
