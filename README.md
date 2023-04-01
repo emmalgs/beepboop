@@ -1,3 +1,35 @@
+# The Beep Boop Machine
+
+#### By _**Emma Gerigscott**_
+
+#### _A webpage that transforms a number into Mr.Rogers nonsense!_
+
+## Technologies Used
+
+* HTML
+* CSS
+* JavaScript
+
+## Description
+
+A webpage that takes a user's input number and outputs a range of robot noises plus a little Mr.Roger's catch phrase. This was used to practice loops, if else statements and arrays in JavaScript. 
+
+## Setup/Installation Requirements
+
+* _Clone this repository to your desktop_
+* _Navigate to the directory_
+* _Open index.html in your browser_
+
+## Known Bugs
+
+* _The typewriter feature does not timeout correctly and starts going faster and faster unless you refresh the page_
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2023 Emma Gerigscott
+
 ### TDD
 
 Describe: beepBooper();
